@@ -1,10 +1,10 @@
 <li>
 	{{name}} :
 	${{amount}}
-	<button class="change-essential" data-id="{{id}}" data-newessential="{{essential}}">
+	<button class="w3-button w3-sand w3-round" data-id="{{id}}" data-newessential="{{essential}}">
 		{{#if essential}}Nice to Have{{else}}Must Have{{/if}}
 	</button>
+	{{essential-total}}
 
-	<button class="delete-wedding" data-id="{{id}}">Delete</button>
+	<button class="delete-wedding w3-button w3-light-grey w3-hover-red w3-round" data-id="{{id}}">Delete</button>
 </li>
-  

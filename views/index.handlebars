@@ -1,9 +1,10 @@
+<div class="w3-container" >
+<div class="w3-light-blue">
+<h1 class="w3-jumbo w3-center">Wedding Planner</h1>
+</div>
+<h2 class="w3-pale-red" style="width:60%">List the Items You Must Have</h2>
 
-<h1>Wedding Planner</h1>
-
-<h2>List the Items You Must Have</h2>
-
-<ul>
+<ul class="w3-ul w3-border w3-card" style="width:60%">
   {{#each weddings}}
     {{#unless essentials}}
       {{> weddings/wedding-block essential=true}}
@@ -11,9 +12,9 @@
   {{/each}}
 </ul>
 
-<h2>List the Items You Don't Need But Would Be Nice to Have</h2>
+<h2 class="w3-pale-red" style="width:60%">List the Items You Don't Need But Would Be Nice to Have</h2>
 
-<ul>
+<ul class="w3-ul w3-border w3-card" style="width:60%">
   {{#each weddings}}
     {{#if essentials}}
       {{> weddings/wedding-block essential=false}}
@@ -22,34 +23,43 @@
 </ul>
 
 <h2>Add an Item</h2>
-<form class="create-form">
+<form class="w3-container">
 
-  <div class="form-group">
+  <div class="">
     <label for="ca">Item Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="ca" name="name" class="w3-input w3-border w3-animate-input" style="width:30%">
   </div>
 
-  <div class="form-group">
-    <label for="ca">Amount:</label>
-    <input type="text" id="amount" name="amount">
+  <div class="">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" class="w3-input w3-border w3-animate-input" style="width:30%">
   </div>
 
-  <div class="form-group">
-    <label for="essential">Must Have versus Need to Have</label><br>
-    <input type="radio" name="essentials" value="1" checked> Nice to Have<br>
-    <input type="radio" name="essentials" value="0"> Must Have
+  <div class="">
+    
+    
+   <p> <input type="radio" name="essentials" value="1" class="w3-radio" style="width:15%" checked> 
+    <label>Nice to Have</label>
+    </p>
+    <p>
+    <input type="radio" name="essentials" value="0" class="w3-radio" style="width:15%"> 
+    <label>Must Have</label>
+    </p>
   </div>
-
-  <button type="submit">Add Item</button>
+<br>
+  <button class="w3-button w3-green" type="submit">Add Item</button>
 </form>
 
 <h2>Add Budget Amount</h2>
-<form class="second-form">
+<form class="w3-container">
 
-   <div class="form-group">
-    <label for="ca">Budget:</label>
-    <input type="text" id="ca" name="budget">
+   <div class="w3-teal" style="width:60%">
+    <label for="budget">Budget:</label>
+    <p>
+    <input type="text" id="budget" name="budget" class="w3-input w3-border">
+  </p>
   </div>
 
   <button type="amount">Add Amount</button>
 </form>
+</div>
