@@ -1,0 +1,55 @@
+
+<h1>Wedding Planner</h1>
+
+<h2>List the Items You Must Have</h2>
+
+<ul>
+  {{#each weddings}}
+    {{#unless essentials}}
+      {{> weddings/wedding-block essential=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>List the Items You Don't Need But Would Be Nice to Have</h2>
+
+<ul>
+  {{#each weddings}}
+    {{#if essentials}}
+      {{> weddings/wedding-block essential=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add an Item</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Item Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="ca">Amount:</label>
+    <input type="text" id="amount" name="amount">
+  </div>
+
+  <div class="form-group">
+    <label for="essential">Must Have versus Need to Have</label><br>
+    <input type="radio" name="essentials" value="1" checked> Nice to Have<br>
+    <input type="radio" name="essentials" value="0"> Must Have
+  </div>
+
+  <button type="submit">Add Item</button>
+</form>
+
+<h2>Add Budget Amount</h2>
+<form class="second-form">
+
+   <div class="form-group">
+    <label for="ca">Budget:</label>
+    <input type="text" id="ca" name="budget">
+  </div>
+
+  <button type="amount">Add Amount</button>
+</form>
