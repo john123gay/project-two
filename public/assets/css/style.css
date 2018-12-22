@@ -3,7 +3,6 @@ li {
   margin: 5px;
   background: #faebd7;
 }
-
 .label {
   font-weight: bold;
 }
@@ -16,4 +15,40 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+  margin-left: 20px;
+}
+.container {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkmagenta;
+  background: peachpuff;
+  padding-left: 25px;
+}
+header{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkmagenta;
+  text-align: center;
+  font-size: 20pt;
+}
+p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkmagenta;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+h2 {
+margin-left: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkmagenta;
+}
+.create-form {
+  margin-left: 20px;
+}
+.bride-image {
+  float:left;
+  margin: 20px;
+}
+.below {
+  clear: left;
 }
